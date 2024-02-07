@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: l4back
+  datasource:
+    username: s368849
+    url: jdbc:postgresql://localhost:5432/studs
+    password: nLSspIG8ue14s0Q5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+server:
+  port: 13228

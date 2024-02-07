@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: l4back
+  datasource:
+    username: porunit
+    url: jdbc:postgresql://localhost:5432/bebra
+    password: 358000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
