@@ -2,9 +2,9 @@ spring:
   application:
     name: l4back
   datasource:
-    username: porunit
-    url: jdbc:postgresql://localhost:5432/bebra
-    password: 358000
+    username: s368849
+    url: jdbc:postgresql://localhost:5432/studs
+    password: nLSspIG8ue14s0Q5
   jpa:
     hibernate:
       ddl-auto: update
@@ -12,3 +12,10 @@ spring:
     properties:
       hibernate:
         format_sql: true
+server:
+  port: 13228
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:cert.p12
+    key-store-password: zalupa
+    key-alias: 1s

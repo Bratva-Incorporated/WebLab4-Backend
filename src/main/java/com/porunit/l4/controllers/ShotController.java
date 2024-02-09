@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/hit")
+@CrossOrigin("*")
 public class ShotController {
 
     private final ShotService shotService;
