@@ -20,12 +20,15 @@ import lombok.NoArgsConstructor;
 public class Shot {
 
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull @Min(value = -5) @Max(value = 5)
+    @NotNull
+    private String username;
+
+    @NotNull
+    @Min(value = -5)
+    @Max(value = 5)
     private Double y;
 
     @NotNull

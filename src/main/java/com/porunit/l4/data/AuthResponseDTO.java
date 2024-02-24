@@ -1,4 +1,4 @@
-package com.porunit.l4.controllers;
+package com.porunit.l4.data;
 
 import lombok.Builder;
 import lombok.Data;

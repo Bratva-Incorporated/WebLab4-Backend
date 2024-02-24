@@ -24,6 +24,7 @@ public class SecurityConfig {
     private final UserService userService;
 
     @Bean
+    @SuppressWarnings("all")
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.cors().and()
                 .csrf().disable()

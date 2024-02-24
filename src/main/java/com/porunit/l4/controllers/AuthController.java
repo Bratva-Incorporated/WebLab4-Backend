@@ -1,5 +1,6 @@
 package com.porunit.l4.controllers;
 
+import com.porunit.l4.data.AuthResponseDTO;
 import com.porunit.l4.data.UserDTO;
 import com.porunit.l4.exceptions.UsernameTakenException;
 import com.porunit.l4.jwt.JwtProvider;

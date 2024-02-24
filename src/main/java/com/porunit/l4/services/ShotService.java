@@ -16,24 +16,24 @@ public class ShotService {
     private final ShotRepository shotRepository;
     private final AreaChecker areaChecker;
 
-    public List<Shot> getShots() {
-        return shotRepository.findAll();
+    public List<Shot> getShots(String username) {
+        return shotRepository.findAllByUsername(username);
     }
 
-    public boolean process(ShotInputDTO dto) {
+    public boolean process(String username, ShotInputDTO dto) {
         boolean isHit = areaChecker.checkHit(dto);
         shotRepository.save(
                 Shot.builder()
-                .x(dto.getX())
-                .y(dto.getY())
-                .r(dto.getR())
-                .isHit(isHit)
-                .build()
-        );
+                        .x(dto.getX())
+                        .y(dto.getY())
+                        .r(dto.getR())
+                        .username(username)
+                        .isHit(isHit)
+                        .build());
         return isHit;
     }
 
-    public void deleteAll(){
-        shotRepository.deleteAll();
+    public void deleteAll(String username) {
+        shotRepository.deleteAllByUsername(username);
     }
 }
